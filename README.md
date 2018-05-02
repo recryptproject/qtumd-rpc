@@ -1,22 +1,22 @@
-qtumd-rpc.js
+recryptd-rpc.js
 ===============
 
-A client library to connect to QTUM Core RPC in JavaScript.
+A client library to connect to RECRYPT Core RPC in JavaScript.
 
 ## Get Started
 
-qtumd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+recryptd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install qtumd-rpc
+npm install recryptd-rpc
 ```
 
 ## Examples
 
 ```javascript
 var run = function() {
-  var qtumcore = require('qtumcore');
-  var RpcClient = require('qtumd-rpc');
+  var recryptcore = require('recryptcore');
+  var RpcClient = require('recryptd-rpc');
 
   var config = {
     protocol: 'http',
@@ -52,7 +52,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new qtumcore.Transaction(rawtx.result);
+          var tx = new recryptcore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
